@@ -2,7 +2,7 @@
 
 //'use strict';
 
-var dappAddress = "n1zyMnYmRXpd915D2FFdfmLtaDF3ic2oAEN";
+var dappAddress = "n1uLi9KD6edLbGv31odHriHCkaGDGFqypMu";
 var DetailMovie = function() {
     this.from = "";
 }
