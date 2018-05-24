@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Movie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Movie_store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- start plugins -->
+<link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+<link href="css/style_loading.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	<div class="container_wrap">
+		<div class="header_top">
+		    <div class="col-sm-3 logo"><a href="movie.html"><img src="images/logo.png" alt=""/></a></div>
+		    <div class="col-sm-6 nav">
+			  <ul>
+					<li><span class="simptip-position-bottom simptip-movable" data-tooltip="最新影视"><a href="movie.html"> </a> </span></li>
+				 	<li> <span class="simptip-position-bottom simptip-movable" data-tooltip="录入影视"><a href="input_movie.html"> </a></span></li>
+			 </ul>
+			</div>
+			<div class="clearfix"> </div>
+	      </div>
+	      <div class="content">
+			<h2 class="m_3" align="center">最新分享影视</h1>
+			<div class="loader" id="loading_page">
+				<svg class="circular" viewBox="25 25 50 50">
+					<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+				</svg>
+			</div>
+			<div class="alert alert-success" role="alert" align="center" id="movie_warning">
+					<strong>抱歉 </strong>暂时还没人上传影视哦~您去抢占第一步电影吧！
+			</div>
+			<div class="movie_top" id="main_page">
+				
+				<div class="col-md-9 movie_box" id="movie_list">
+				</div>
+				<!-- <div id="movie_warning">暂无电影</div> -->
+				<div class="col-md-9 movie_box" style="width:100%;">
+					<div id="pagination" class="pagination"></div>
+				</div>
+				
+			</div>
+			<div class="clearfix"> </div>
+			
+	</div>
+</div>
+<div class="container"> 
+ <footer id="footer">
+ 	<div id="footer-3d">
+		<div class="gp-container">
+			<span class="first-widget-bend"></span>
+		</div>		
+	</div>
+    <div id="footer-widgets" class="gp-footer-larger-first-col">
+		<div class="gp-container">
+            <div class="footer-widget footer-1">
+            	<div class="wpb_wrapper">
+					<img src="images/f_logo.png" alt=""/>
+				</div> 
+	          <br>
+	          <p style="line-height: 38px;">Movie Store是依托于“星云激励计划”发展而来，Movie Store汇聚众多优秀作品，提供影视作品的展示、共享，在Movie Store您可以找到任何适合你的影视作品。</p>
+			  <p style="line-height: 38px;" class="text">未来Movie团队将继续以“实现区块链技术与影视娱乐无缝对接”为愿景，以“用星云改变生活”为使命，着力打造基于Nebulas的影视作品社区平台，逐步攻破技术难关拓展出短视频、M友互动、在线直播等多个业务品牌。</p>
+			</div>
+			 <div class="footer_box">
+				<div class="col_1_of_3 span_1_of_3">
+						<h3>免责声明</h3>
+						<ul class="first">
+							<li><a href="javascript:void(0);">1. Movie Store仅为用户发布文字、作品链接及图片内容提供存储空间，Movie Store不对用户发布的内容提供任何形式的保证，不保证内容满足你的要求，Movie Store不承担任何法律责任。</a></li>
+							<li><a href="javascript:void(0);">
+									2. 用户在Movie Store发表的内容（包含但不限于Movie Store目前各产品功能里的内容）仅表明其个人的立场和观点，并不代表Movie Store的立场或观点。</a></li>
+							<li><a href="javascript:void(0);">3. 作为内容的发表者，需自行对所发表内容负责，因所发表内容引发的一切纠纷，由该内容的发表者承担全部法律及连带责任。Movie Store不承担任何法律及连带责任。</a></li>
+						</ul>
+						
+						</div>
+				</div>
+			</div>
+			<div class="footer_box">
+					<div class="col_1_of_3 span_1_of_3">
+							<h3>关于我们</h3>
+							<ul class="first">
+								<li><a href="javascript:void(0);">为了正常使用，请安装<a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">WebExtensionWallet</a>插件</a></li>
+								<li><a href="#">EMAIL: 1289418330@qq.com</a></li>
+								<li><a href="#">ADDRESS: NanShan, ShenZhen</a></li>
+							</ul>
+							<div class="copy">
+							<p>Copyright &copy; 2018.NAS社区爱好者</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+	        <div class="clearfix"> </div>
+		</div>
+	</div>
+  </footer>
+</div>	
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="lib/pagination.min.js"></script>
+<script src="movie.js"></script>
+
+<script id="movie_list_t" type="text/html">
+		<%if(list.length > 0 ){%>
+		<%for(var i = 0; i < list.length; i++) {%>
+			<div class="movie movie-test movie-test-dark movie-test-left">
+				<div class="movie__info list_6">
+					<a href="detail_movie.html?key=<%:=list[i].key%>" class="movie__title"><%:=list[i].name%></a>
+					<p class="movie__time">上传时间：<%:=list[i].uploadTime%></p>
+					<p class="movie__option">文件大小：<%:=list[i].fileSize%></p>
+					<p class="movie__option">资源类型：<%:=list[i].downloadType%></p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		<%}}%>
+	
+</script>	
+</body>
+</html>
