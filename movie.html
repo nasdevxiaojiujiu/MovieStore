@@ -109,7 +109,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<%for(var i = 0; i < list.length; i++) {%>
 			<div class="movie movie-test movie-test-dark movie-test-left">
 				<div class="movie__info list_6">
-					<a href="detail_movie.html?key=<%:=list[i].key%>" class="movie__title"><%:=list[i].name%></a>
+					<% var key = escape(list[i].key)%>
+					<a href="detail_movie.html?key=<%:=key%>" class="movie__title"><%:=list[i].name%></a>
 					<p class="movie__time">上传时间：<%:=list[i].uploadTime%></p>
 					<p class="movie__option">文件大小：<%:=list[i].fileSize%></p>
 					<p class="movie__option">资源类型：<%:=list[i].downloadType%></p>
